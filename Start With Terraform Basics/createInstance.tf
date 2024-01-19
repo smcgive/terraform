@@ -8,7 +8,7 @@ provider "aws" {
 resource "aws_instance" "MyFirstInstance" {
   count         = 3
   ami           = "ami-08734ec479a1ace4a"
-  instance_type = "t4g.micro"
+  instance_type = "t2.micro"
 
   tags = {
     Name = "demoinstnce-${count.index}"
